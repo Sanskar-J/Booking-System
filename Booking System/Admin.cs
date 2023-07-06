@@ -37,5 +37,10 @@ namespace Booking_System
             log.Show();
             this.Hide();
         }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

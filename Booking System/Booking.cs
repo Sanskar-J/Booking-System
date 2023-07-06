@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
+//using System.Data.SqlClient;
+using MongoDB.Driver;
+using MongoDB.Bson;
 
 namespace Booking_System
 {
@@ -17,8 +19,10 @@ namespace Booking_System
         {
             InitializeComponent();
         }
-        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Sanskar\Documents\BookingDB.mdf;Integrated Security=True;Connect Timeout=30");
+        MongoClient client = new MongoClient("mongodb+srv://Form:formpass@cluster0.ir7prkj.mongodb.net/?retryWrites=true&w=majority");
 
+        //SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Sanskar\Documents\BookingDB.mdf;Integrated Security=True;Connect Timeout=30");
+        
         private void label6_Click(object sender, EventArgs e)
         {
 
@@ -118,16 +122,31 @@ namespace Booking_System
         }
         private void getCustId()
         {
-            Con.Open();
-            SqlCommand sqc = new SqlCommand("select CustId from CustomerTable",Con);
-            SqlDataReader rdr;
-            rdr=sqc.ExecuteReader();
+            IMongoDatabase database = client.GetDatabase("BookingDB");
+            IMongoCollection<CustomerSchema> collection = database.GetCollection<CustomerSchema>("Customer");
+            List<CustomerSchema> customers = collection.Find(new BsonDocument()).ToList();
             DataTable dt = new DataTable();
-            dt.Columns.Add("CustId",typeof(string));
-            dt.Load(rdr);
+            dt.Columns.Add("CustId", typeof(string));
+            
             CustomerIdCb.ValueMember = "CustId";
             CustomerIdCb.DataSource = dt;
-            Con.Close();
+
+            foreach (var customer in customers)
+            {
+                dt.Rows.Add(customer.CustId);
+            }
+
+
+            //Con.Open();
+            //SqlCommand sqc = new SqlCommand("select CustId from CustomerTable",Con);
+            //SqlDataReader rdr;
+            //rdr=sqc.ExecuteReader();
+            //DataTable dt = new DataTable();
+            //dt.Columns.Add("CustId",typeof(string));
+            //dt.Load(rdr);
+            //CustomerIdCb.ValueMember = "CustId";
+            //CustomerIdCb.DataSource = dt;
+            //Con.Close();
         }
 
         private void Booking_Load(object sender, EventArgs e)
@@ -136,16 +155,43 @@ namespace Booking_System
         }
         private void fetchCustName()
         {
-            Con.Open();
-            string query = $"select * from CustomerTable where CustId={CustomerIdCb.SelectedValue.ToString()}";
-            SqlCommand sqc = new SqlCommand(query, Con);
-            DataTable dataTable = new DataTable(); 
-            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqc);
-            sqlDataAdapter.Fill(dataTable);
-            foreach(DataRow dr in dataTable.Rows) {
-                CustNameLbl.Text = $" {dr["CustName"].ToString()}";
+            IMongoDatabase database = client.GetDatabase("BookingDB");
+            IMongoCollection<CustomerSchema> collection = database.GetCollection<CustomerSchema>("Customer");
+
+            try
+            {
+                // Define the filter to match the customer ID
+                var filter = Builders<CustomerSchema>.Filter.Eq("CustId", ObjectId.Parse(CustomerIdCb.SelectedValue.ToString()));
+
+                // Retrieve the document matching the filter
+                CustomerSchema customerBooking = collection.Find(filter).FirstOrDefault();
+                
+                if (customerBooking != null)
+                {
+                    string customerName = customerBooking.CustName;
+                    CustNameLbl.Text = customerName;
+
+
+                }
+                else
+                {
+                    MessageBox.Show("Customer not found.");
+                }
             }
-            Con.Close();
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            //Con.Open();
+            //string query = $"select * from CustomerTable where CustId={CustomerIdCb.SelectedValue.ToString()}";
+            //SqlCommand sqc = new SqlCommand(query, Con);
+            //DataTable dataTable = new DataTable(); 
+            //SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqc);
+            //sqlDataAdapter.Fill(dataTable);
+            //foreach(DataRow dr in dataTable.Rows) {
+            //    CustNameLbl.Text = $" {dr["CustName"].ToString()}";
+            //}
+            //Con.Close();
         }
         private void CustomerIdCb_SelectionChangeCommitted(object sender, EventArgs e)
         {
@@ -196,7 +242,46 @@ namespace Booking_System
         {
             clear();
         }
+        private void add()
+        {
+            IMongoDatabase database = client.GetDatabase("BookingDB");
+            IMongoCollection<BookingSchema> collection = database.GetCollection<BookingSchema>("Booking");
 
+            try
+            {
+                StringBuilder sb = new StringBuilder();
+                if (PhotographyCb.Checked) { sb.Append("Photography "); }
+                if (VideographyCb.Checked) { sb.Append("Videography "); }
+                if (CameraCb.Checked) { sb.Append("Camera "); }
+
+                BookingSchema newBooking = new BookingSchema
+                {
+                    Bid = ObjectId.GenerateNewId(),
+                    BDate = DatePicker.Value,
+                    BTime = TimeCb.Text,
+                    CustName=CustNameLbl.Text,
+                    Function=FunctionTb.Text,
+                    Venue= VenueTb.Text,
+                    EquipmentsIncluded=sb.ToString(),
+                    IncludeCost= Convert.ToInt32(incTotal.Text),
+                    OtherCharges= Convert.ToInt32(OtherCharges.Text),
+                    GndTotal= Convert.ToInt32(Total.Text),
+                    Advance= Convert.ToInt32(Advance.Text),
+                    Balance= Convert.ToInt32(Balance.Text),
+
+                };
+
+
+                collection.InsertOne(newBooking);
+
+
+                MessageBox.Show("Data inserted successfully!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
         private void bunifuThinButton24_Click(object sender, EventArgs e)
         {
             if (CustNameLbl.Text == "" || FunctionTb.Text == "" || VenueTb.Text == "" || TimeCb.SelectedIndex==-1)
@@ -205,28 +290,30 @@ namespace Booking_System
             }
             else
             {
-                try
-                {
-                    StringBuilder sb = new StringBuilder();
-                    if(PhotographyCb.Checked) { sb.Append("Photography "); }
-                    if (VideographyCb.Checked) { sb.Append("Videography "); }
-                    if (CameraCb.Checked) { sb.Append("Camera "); }
-                    Con.Open();
-                    string query = $"insert into BookingsTable values('{DatePicker.Value.ToString("yyyy-MM-dd")}','{TimeCb.Text}','{CustNameLbl.Text}'," +
-                        $"'{FunctionTb.Text}','{VenueTb.Text}','{sb.ToString()}','{Convert.ToInt32(incTotal.Text)}','{Convert.ToInt32(OtherCharges.Text)}'," +
-                        $"'{Convert.ToInt32(Total.Text)}','{Convert.ToInt32(Advance.Text)}','{Convert.ToInt32(Balance.Text)}')";
-                    SqlCommand sqlCommand = new SqlCommand(query, Con);
-                    sqlCommand.ExecuteNonQuery();
-                    MessageBox.Show("Booking Successful");
+                add();
+                clear();
+                //try
+                //{
+                //    StringBuilder sb = new StringBuilder();
+                //    if(PhotographyCb.Checked) { sb.Append("Photography "); }
+                //    if (VideographyCb.Checked) { sb.Append("Videography "); }
+                //    if (CameraCb.Checked) { sb.Append("Camera "); }
+                //    Con.Open();
+                //    string query = $"insert into BookingsTable values('{DatePicker.Value.ToString("yyyy-MM-dd")}','{TimeCb.Text}','{CustNameLbl.Text}'," +
+                //        $"'{FunctionTb.Text}','{VenueTb.Text}','{sb.ToString()}','{Convert.ToInt32(incTotal.Text)}','{Convert.ToInt32(OtherCharges.Text)}'," +
+                //        $"'{Convert.ToInt32(Total.Text)}','{Convert.ToInt32(Advance.Text)}','{Convert.ToInt32(Balance.Text)}')";
+                //    SqlCommand sqlCommand = new SqlCommand(query, Con);
+                //    sqlCommand.ExecuteNonQuery();
+                //    MessageBox.Show("Booking Successful");
 
-                    Con.Close();
-                    //populate();
-                    clear();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+                //    Con.Close();
+                //    //populate();
+                //    clear();
+                //}
+                //catch (Exception ex)
+                //{
+                //    MessageBox.Show(ex.Message);
+                //}
             }
 
         }

@@ -490,9 +490,9 @@
             "Day",
             "Night",
             "Full Day"});
-            this.CustomerIdCb.Location = new System.Drawing.Point(272, 154);
+            this.CustomerIdCb.Location = new System.Drawing.Point(231, 154);
             this.CustomerIdCb.Name = "CustomerIdCb";
-            this.CustomerIdCb.Size = new System.Drawing.Size(121, 30);
+            this.CustomerIdCb.Size = new System.Drawing.Size(162, 30);
             this.CustomerIdCb.TabIndex = 18;
             this.CustomerIdCb.SelectionChangeCommitted += new System.EventHandler(this.CustomerIdCb_SelectionChangeCommitted);
             // 
@@ -500,7 +500,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Bahnschrift Condensed", 18.32727F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(152, 150);
+            this.label7.Location = new System.Drawing.Point(111, 150);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(120, 34);

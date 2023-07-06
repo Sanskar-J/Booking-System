@@ -7,8 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
+//using System.Data.SqlClient;
 using System.IdentityModel.Protocols.WSTrust;
+using MongoDB.Bson;
+using MongoDB.Driver;
 
 namespace Booking_System
 {
@@ -18,18 +20,28 @@ namespace Booking_System
         {
             InitializeComponent();
         }
-        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Sanskar\Documents\BookingDB.mdf;Integrated Security=True;Connect Timeout=30");
+        MongoClient client = new MongoClient("mongodb+srv://Form:formpass@cluster0.ir7prkj.mongodb.net/?retryWrites=true&w=majority");
+
+        //SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Sanskar\Documents\BookingDB.mdf;Integrated Security=True;Connect Timeout=30");
         private void populate()
         {
-            Con.Open();
-            string query = "select * from BookingsTable";
-            SqlDataAdapter adapter = new SqlDataAdapter(query, Con);
-            SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
+            IMongoDatabase database = client.GetDatabase("BookingDB");
+            IMongoCollection<BookingSchema> collection = database.GetCollection<BookingSchema>("Booking");
 
-            var ds = new DataSet();
-            adapter.Fill(ds);
-            BookingsDGV.DataSource = ds.Tables[0];
-            Con.Close();
+            List<BookingSchema> documents = collection.Find(new BsonDocument()).ToList();
+
+            // Bind the documents to the DataGridView
+            BookingsDGV.DataSource = documents;
+
+            //Con.Open();
+            //string query = "select * from BookingsTable";
+            //SqlDataAdapter adapter = new SqlDataAdapter(query, Con);
+            //SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
+
+            //var ds = new DataSet();
+            //adapter.Fill(ds);
+            //BookingsDGV.DataSource = ds.Tables[0];
+            //Con.Close();
         }
         private void ViewBooking_Load(object sender, EventArgs e)
         {
@@ -41,31 +53,62 @@ namespace Booking_System
             Application.Exit();
         }
         //delete entry
-        int bookKey = 0;
+        //int bookKey = 0;
+        ObjectId key = new ObjectId();
+        private void delete()
+        {
+
+            try
+            {
+                IMongoDatabase database = client.GetDatabase("BookingDB");
+                IMongoCollection<BookingSchema> collection = database.GetCollection<BookingSchema>("Booking");
+
+                // Define the filter to identify the document to delete
+                var filter = Builders<BookingSchema>.Filter.Eq("Bid", ObjectId.Parse(key.ToString()));
+
+                // Delete the document matching the filter
+                DeleteResult result = collection.DeleteOne(filter);
+
+                if (result.DeletedCount > 0)
+                {
+                    MessageBox.Show("Document deleted successfully!");
+                }
+                else
+                {
+                    MessageBox.Show("Document not found.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
         private void bunifuThinButton23_Click(object sender, EventArgs e)
         {
-            if (bookKey == 0)
+            if (/*bookKey == 0*/ key.ToString()== "000000000000000000000000")
             {
                 MessageBox.Show("Select the Booking to be deleted");
             }
             else
             {
-                try
-                {
-                    Con.Open();
-                    string query = $"delete from BookingsTable where Bid={bookKey};";
-                    SqlCommand cmd = new SqlCommand(query, Con);
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Booking Deleted Successfully");
-                    Con.Close();
-                    populate();
-                    //clear();
+                delete();
+                populate();
+                //try
+                //{
+                //    Con.Open();
+                //    string query = $"delete from BookingsTable where Bid={bookKey};";
+                //    SqlCommand cmd = new SqlCommand(query, Con);
+                //    cmd.ExecuteNonQuery();
+                //    MessageBox.Show("Booking Deleted Successfully");
+                //    Con.Close();
+                //    populate();
+                //    //clear();
 
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+                //}
+                //catch (Exception ex)
+                //{
+                //    MessageBox.Show(ex.Message);
+                //}
             }
         }
 
@@ -82,11 +125,13 @@ namespace Booking_System
 
             if (bookDate == "")
             {
-                bookKey = 0;
+                //bookKey = 0;
+                key = new ObjectId();
             }
             else
             {
-                bookKey = Convert.ToInt32(BookingsDGV.SelectedRows[0].Cells[0].Value.ToString());
+                //bookKey = Convert.ToInt32(BookingsDGV.SelectedRows[0].Cells[0].Value.ToString());
+                key = new ObjectId(BookingsDGV.SelectedRows[0].Cells[0].Value.ToString());
                 if(printPreviewDialog1.ShowDialog()== DialogResult.OK)
                 {
                     printDocument1.Print();
