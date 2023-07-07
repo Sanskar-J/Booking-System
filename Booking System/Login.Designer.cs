@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.UsernameTb = new System.Windows.Forms.TextBox();
             this.PassTb = new System.Windows.Forms.TextBox();
@@ -39,10 +40,10 @@
             this.label12 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.RememberMe = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -54,6 +55,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(288, 283);
             this.panel1.TabIndex = 0;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::Booking_System.Properties.Resources.photograph;
+            this.pictureBox2.Location = new System.Drawing.Point(83, 74);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(125, 125);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
             // 
             // label1
             // 
@@ -82,6 +94,7 @@
             this.PassTb.Font = new System.Drawing.Font("Bahnschrift Condensed", 13.74545F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PassTb.Location = new System.Drawing.Point(390, 145);
             this.PassTb.Name = "PassTb";
+            this.PassTb.PasswordChar = '*';
             this.PassTb.Size = new System.Drawing.Size(286, 33);
             this.PassTb.TabIndex = 3;
             // 
@@ -166,7 +179,7 @@
             this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.Black;
             this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.Black;
-            this.bunifuThinButton21.Location = new System.Drawing.Point(438, 198);
+            this.bunifuThinButton21.Location = new System.Drawing.Point(438, 186);
             this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton21.Name = "bunifuThinButton21";
             this.bunifuThinButton21.Size = new System.Drawing.Size(181, 41);
@@ -174,16 +187,16 @@
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
             // 
-            // pictureBox2
+            // RememberMe
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::Booking_System.Properties.Resources.photograph;
-            this.pictureBox2.Location = new System.Drawing.Point(83, 74);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(125, 125);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
+            this.RememberMe.AutoSize = true;
+            this.RememberMe.Font = new System.Drawing.Font("Bahnschrift Condensed", 11.12727F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RememberMe.Location = new System.Drawing.Point(610, 235);
+            this.RememberMe.Name = "RememberMe";
+            this.RememberMe.Size = new System.Drawing.Size(111, 25);
+            this.RememberMe.TabIndex = 10;
+            this.RememberMe.Text = "Remember Me";
+            this.RememberMe.UseVisualStyleBackColor = true;
             // 
             // Login
             // 
@@ -191,6 +204,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(733, 283);
+            this.Controls.Add(this.RememberMe);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.AdminLogin);
             this.Controls.Add(this.pictureBox1);
@@ -202,14 +216,15 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Login_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -228,6 +243,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label AdminLogin;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.CheckBox RememberMe;
     }
 }
 

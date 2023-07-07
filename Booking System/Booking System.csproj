@@ -16,7 +16,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\Sanskar\Documents\published_apps\bookings app\</PublishUrl>
+    <PublishUrl>C:\Users\Sanskar\Documents\published_apps\Application Files\bookingapp v2\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -26,7 +26,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationRevision>4</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -383,6 +383,12 @@
     <EmbeddedResource Include="ViewBooking.resx">
       <DependentUpon>ViewBooking.cs</DependentUpon>
     </EmbeddedResource>
+    <Content Include="bahnschrift.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bebas-neue.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Booking System_TemporaryKey.pfx" />
     <None Include="libmongocrypt.dylib" />
     <None Include="libmongocrypt.so" />
@@ -426,6 +432,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="mongocrypt.dll" />
+    <Content Include="Resources\photograph.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.4.0.2\build\Fody.targets" Condition="Exists('..\packages\Fody.4.0.2\build\Fody.targets')" />
