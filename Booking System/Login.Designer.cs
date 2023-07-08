@@ -132,6 +132,8 @@
             this.AdminLogin.Text = "ADMIN";
             this.AdminLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.AdminLogin.Click += new System.EventHandler(this.AdminLogin_Click);
+            this.AdminLogin.MouseLeave += new System.EventHandler(this.AdminLogin_MouseLeave);
+            this.AdminLogin.MouseHover += new System.EventHandler(this.AdminLogin_MouseHover);
             // 
             // label12
             // 

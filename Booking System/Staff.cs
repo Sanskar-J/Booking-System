@@ -11,14 +11,17 @@ using System.Windows.Forms;
 using System.IdentityModel.Protocols.WSTrust;
 using MongoDB.Driver;
 using MongoDB.Bson;
+using System.Xml.Linq;
 
 namespace Booking_System
 {
     public partial class Staff : Form
     {
-        public Staff()
+        string name;
+        public Staff(string name)
         {
             InitializeComponent();
+            this.name = name;
         }
         //SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Sanskar\Documents\BookingDB.mdf;Integrated Security=True;Connect Timeout=30");
         MongoClient client = new MongoClient("mongodb+srv://Form:formpass@cluster0.ir7prkj.mongodb.net/?retryWrites=true&w=majority");
@@ -282,14 +285,15 @@ namespace Booking_System
 
         private void bunifuThinButton25_Click(object sender, EventArgs e)
         {
-            Admin admin=new Admin();
+            Admin admin=new Admin(name);
             admin.Show();
             this.Hide();
         }
 
         private void bunifuThinButton26_Click(object sender, EventArgs e)
         {
-            MainForm home = new MainForm();
+            MainForm home = new MainForm("Admin");
+            //home.name = "Hello Admin, welcome to booking app";
             home.Show();
             this.Hide();
         }

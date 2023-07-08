@@ -15,9 +15,11 @@ namespace Booking_System
 {
     public partial class Booking : Form
     {
-        public Booking()
+        string name;
+        public Booking(string name)
         {
             InitializeComponent();
+            this.name = name;
         }
         MongoClient client = new MongoClient("mongodb+srv://Form:formpass@cluster0.ir7prkj.mongodb.net/?retryWrites=true&w=majority");
 
@@ -35,6 +37,8 @@ namespace Booking_System
 
         private void label12_Click(object sender, EventArgs e)
         {
+            MainForm Home = new MainForm(name);
+            Home.delete();
             Application.Exit();
         }
 
@@ -320,7 +324,7 @@ namespace Booking_System
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
-            MainForm Home = new MainForm();
+            MainForm Home = new MainForm(name);
             Home.Show();
             this.Hide();
         }

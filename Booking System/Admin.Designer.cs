@@ -129,13 +129,15 @@
             this.AdminLogin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.AdminLogin.Font = new System.Drawing.Font("Bahnschrift Condensed", 13.74545F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AdminLogin.ForeColor = System.Drawing.Color.White;
-            this.AdminLogin.Location = new System.Drawing.Point(174, 186);
+            this.AdminLogin.Location = new System.Drawing.Point(148, 186);
             this.AdminLogin.Name = "AdminLogin";
-            this.AdminLogin.Size = new System.Drawing.Size(48, 27);
+            this.AdminLogin.Size = new System.Drawing.Size(90, 27);
             this.AdminLogin.TabIndex = 10;
-            this.AdminLogin.Text = "login";
+            this.AdminLogin.Text = "home login";
             this.AdminLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.AdminLogin.Click += new System.EventHandler(this.AdminLogin_Click);
+            this.AdminLogin.MouseLeave += new System.EventHandler(this.AdminLogin_MouseLeave);
+            this.AdminLogin.MouseHover += new System.EventHandler(this.AdminLogin_MouseHover);
             // 
             // Admin
             // 

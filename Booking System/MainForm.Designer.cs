@@ -35,6 +35,7 @@
             this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.helloLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -166,12 +167,23 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // helloLbl
+            // 
+            this.helloLbl.AutoSize = true;
+            this.helloLbl.Font = new System.Drawing.Font("Bebas Neue", 15.70909F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.helloLbl.Location = new System.Drawing.Point(114, 165);
+            this.helloLbl.Name = "helloLbl";
+            this.helloLbl.Size = new System.Drawing.Size(0, 29);
+            this.helloLbl.TabIndex = 12;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(962, 676);
+            this.Controls.Add(this.helloLbl);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.bunifuThinButton24);
             this.Controls.Add(this.bunifuThinButton23);
@@ -197,5 +209,6 @@
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton23;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton24;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label helloLbl;
     }
 }

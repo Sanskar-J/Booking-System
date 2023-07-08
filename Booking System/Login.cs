@@ -14,16 +14,19 @@ using MongoDB.Bson;
 using System.Windows.Input;
 using System.IO;
 using System.Security.Cryptography;
+using System.Xml.Linq;
 
 namespace Booking_System
 {
     public partial class Login : Form
     {
         private string key = "h2T3F8d1G7k9K4p6";
-        public Login()
+        public string name;
+        public Login(string name)
         {
             InitializeComponent();
             LoadSavedCredentials();
+            this.name = name;
         }
         MongoClient client = new MongoClient("mongodb+srv://Form:formpass@cluster0.ir7prkj.mongodb.net/?retryWrites=true&w=majority");
         //SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Sanskar\Documents\BookingDB.mdf;Integrated Security=True;Connect Timeout=30");
@@ -39,7 +42,7 @@ namespace Booking_System
 
         private void AdminLogin_Click(object sender, EventArgs e)
         {
-            Admin admin=new Admin();
+            Admin admin=new Admin(name);
             admin.Show();
             this.Hide();
         }
@@ -53,17 +56,28 @@ namespace Booking_System
             }
             IMongoDatabase database = client.GetDatabase("BookingDB");
             IMongoCollection<StaffSchema> collection = database.GetCollection<StaffSchema>("Staff");
+            IMongoCollection<LoginSchema> collection2 = database.GetCollection<LoginSchema>("Login");
+
             try
             {
                 // Define the filter to match the staff name and staff password
                 var filter = Builders<StaffSchema>.Filter.Eq("StaffName", un) &
                              Builders<StaffSchema>.Filter.Eq("StaffPassword", pass);
-
+                var filter2 = Builders<LoginSchema>.Filter.Eq("LoginName", un);
+                long logged = collection2.CountDocuments(filter2);
                 // Get the count of documents matching the filter
                 long count = collection.CountDocuments(filter);
-                if (count == 1)
+                if (logged == 1)
                 {
-                    MainForm home = new MainForm();
+                    MessageBox.Show("Account instance " +
+                        "already logged in");
+                }
+                else if (count == 1 && logged==0)
+                {
+                    add();
+                    
+                    MainForm home = new MainForm(un);
+                    //home.name = ;
                     home.Show();
                     this.Hide();
                 }
@@ -155,6 +169,36 @@ namespace Booking_System
 
             return Encoding.UTF8.GetString(decryptedBytes);
         }
+        //login add functionality
+        private void add()
+        {
+            IMongoDatabase database = client.GetDatabase("BookingDB");
+            IMongoCollection<LoginSchema> collection = database.GetCollection<LoginSchema>("Login");
+
+            try
+            {
+
+
+                LoginSchema newLogin = new LoginSchema
+                {
+                    //Bid = Guid.NewGuid().ToString(),
+                    LoginId = ObjectId.GenerateNewId(),
+                    LoginName = UsernameTb.Text,
+
+
+                };
+
+
+                collection.InsertOne(newLogin);
+
+
+                //MessageBox.Show("Data inserted successfully!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
             if(UsernameTb.Text=="" || PassTb.Text=="")
@@ -190,6 +234,18 @@ namespace Booking_System
                 //}
             }
             
+        }
+
+        private void AdminLogin_MouseHover(object sender, EventArgs e)
+        {
+            AdminLogin.BackColor = Color.White;
+            AdminLogin.ForeColor= Color.Black;
+        }
+
+        private void AdminLogin_MouseLeave(object sender, EventArgs e)
+        {
+            AdminLogin.BackColor = Color.Black;
+            AdminLogin.ForeColor = Color.White;
         }
     }
 }

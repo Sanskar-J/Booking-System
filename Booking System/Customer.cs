@@ -16,13 +16,17 @@ namespace Booking_System
 {
     public partial class Customer : Form
     {
-        public Customer()
+        string name;
+        public Customer(string name)
         {
             InitializeComponent();
+            this.name = name;
         }
         //exit button
         private void label12_Click(object sender, EventArgs e)
         {
+            MainForm Home = new MainForm(name);
+            Home.delete();
             Application.Exit();
         }
         // sql connector
@@ -272,7 +276,7 @@ namespace Booking_System
 
         private void bunifuThinButton25_Click(object sender, EventArgs e)
         {
-            MainForm home = new MainForm();
+            MainForm home = new MainForm(name);
             home.Show();
             this.Hide();
         }

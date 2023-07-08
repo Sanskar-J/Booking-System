@@ -23,7 +23,7 @@ namespace Booking_System
             Application.SetCompatibleTextRenderingDefault(false);
             //LoadCustomFont("bebas-neue.ttf");
             //LoadCustomFont("bahnschrift.ttf");
-            Application.Run(new Login());
+            Application.Run(new Login(""));
         }
         private static void LoadCustomFont(string name)
         {
