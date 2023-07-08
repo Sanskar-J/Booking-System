@@ -82,3 +82,9 @@ Thank you for your interest in the Photography Booking System project! We hope i
 
 ## Screenshots
 ![Screenshot 1](https://github.com/Sanskar-J/Booking-System/blob/v3/Booking%20System/Screenshots/Screenshot%20(36).png)
+![Screenshot 2](https://github.com/Sanskar-J/Booking-System/blob/v3/Booking%20System/Screenshots/Screenshot%20(37).png)
+![Screenshot 3](https://github.com/Sanskar-J/Booking-System/blob/v3/Booking%20System/Screenshots/Screenshot%20(38).png)
+![Screenshot 4](https://github.com/Sanskar-J/Booking-System/blob/v3/Booking%20System/Screenshots/Screenshot%20(39).png)
+![Screenshot 5](https://github.com/Sanskar-J/Booking-System/blob/v3/Booking%20System/Screenshots/Screenshot%20(40).png)
+![Screenshot 6](https://github.com/Sanskar-J/Booking-System/blob/v3/Booking%20System/Screenshots/Screenshot%20(41).png)
+![Screenshot 7](https://github.com/Sanskar-J/Booking-System/blob/v3/Booking%20System/Screenshots/Screenshot%20(42).png)
