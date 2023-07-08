@@ -37,6 +37,8 @@ namespace Booking_System
 
         public int Balance { get; set; }
 
+        public string BookedBy { get; set; }
+
         // Add other properties as needed for your booking system
 
         // Optional: Add constructors, additional methods, and validation logic as necessary

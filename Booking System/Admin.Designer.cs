@@ -93,6 +93,7 @@
             this.AdminTb.Font = new System.Drawing.Font("Bahnschrift Condensed", 13.74545F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AdminTb.Location = new System.Drawing.Point(148, 93);
             this.AdminTb.Name = "AdminTb";
+            this.AdminTb.PasswordChar = '*';
             this.AdminTb.Size = new System.Drawing.Size(204, 33);
             this.AdminTb.TabIndex = 7;
             // 

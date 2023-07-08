@@ -161,6 +161,7 @@ namespace Booking_System
             String BookGrandTot = BookingsDGV.SelectedRows[0].Cells[9].Value.ToString();
             String BookAdvance = BookingsDGV.SelectedRows[0].Cells[10].Value.ToString();
             String BookBalance = BookingsDGV.SelectedRows[0].Cells[11].Value.ToString();
+            String BookBy = BookingsDGV.SelectedRows[0].Cells[12].Value.ToString();
 
 
             e.Graphics.DrawString("Booking Summary", new Font("Bebas Neue", 30,FontStyle.Regular),Brushes.Red,new Point(250));
@@ -177,6 +178,8 @@ namespace Booking_System
             e.Graphics.DrawString("Total: " + BookGrandTot, new Font("Bahnschrift", 20, FontStyle.Regular), Brushes.Black, new Point(130, 700));
             e.Graphics.DrawString("Advance: " + BookAdvance, new Font("Bahnschrift", 20, FontStyle.Regular), Brushes.Black, new Point(500, 650));
             e.Graphics.DrawString("Balance: " + BookBalance, new Font("Bahnschrift", 20, FontStyle.Regular), Brushes.Black, new Point(500, 700));
+            e.Graphics.DrawString("Booked By: " + BookBy, new Font("Bahnschrift", 20, FontStyle.Regular), Brushes.Black, new Point(130, 900));
+
             Pen blackPen = new Pen(Color.Black, 3);
 
             // Create location and size of rectangle.

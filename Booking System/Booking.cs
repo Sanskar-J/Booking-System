@@ -263,17 +263,18 @@ namespace Booking_System
                     Bid = ObjectId.GenerateNewId(),
                     BDate = DatePicker.Value,
                     BTime = TimeCb.Text,
-                    CustName=CustNameLbl.Text,
-                    Function=FunctionTb.Text,
-                    Venue= VenueTb.Text,
-                    EquipmentsIncluded=sb.ToString(),
-                    IncludeCost= Convert.ToInt32(incTotal.Text),
-                    OtherCharges= Convert.ToInt32(OtherCharges.Text),
-                    GndTotal= Convert.ToInt32(Total.Text),
-                    Advance= Convert.ToInt32(Advance.Text),
-                    Balance= Convert.ToInt32(Balance.Text),
+                    CustName = CustNameLbl.Text,
+                    Function = FunctionTb.Text,
+                    Venue = VenueTb.Text,
+                    EquipmentsIncluded = sb.ToString(),
+                    IncludeCost = Convert.ToInt32(incTotal.Text),
+                    OtherCharges = Convert.ToInt32(OtherCharges.Text),
+                    GndTotal = Convert.ToInt32(Total.Text),
+                    Advance = Convert.ToInt32(Advance.Text),
+                    Balance = Convert.ToInt32(Balance.Text),
+                    BookedBy = name,
 
-                };
+            };
 
 
                 collection.InsertOne(newBooking);
