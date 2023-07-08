@@ -79,3 +79,6 @@ The Photography Booking System project is licensed under the [MIT License](https
 If you have any questions or need further assistance, feel free to contact the project maintainer at [sanskar.moc.liamg@gmail.com](mailto:sanskar.moc.liamg@gmail.com).
 
 Thank you for your interest in the Photography Booking System project! We hope it proves useful for your photography business or any similar application.
+
+## Screenshots
+![Screenshot 1](https://github.com/Sanskar-J/Booking-System/blob/v3/Booking%20System/Screenshots/Screenshot%20(36).png)
