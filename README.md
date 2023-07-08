@@ -90,6 +90,6 @@ Thank you for your interest in the Photography Booking System project! We hope i
 ![Screenshot 7](https://github.com/Sanskar-J/Booking-System/blob/v3/Booking%20System/Screenshots/Screenshot%20(42).png)
 
 <p align="center">
-  <img src="https://github.com/Sanskar-J/Booking-System/blob/v3/Booking%20System/Screenshots/Screenshot%20(36).png)https://github.com/Sanskar-J/Booking-System/blob/v3/Booking%20System/Screenshots/Screenshot%20(36).png" alt="Example Image">
+  <img src="https://github.com/Sanskar-J/Booking-System/blob/v3/Booking%20System/Screenshots/Screenshot%20(36).png" alt="Example Image">
 </p>
 
