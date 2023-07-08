@@ -172,7 +172,7 @@ namespace Booking_System
             e.Graphics.DrawString("Name: " + BookCustName, new Font("Bahnschrift", 20, FontStyle.Regular), Brushes.Black, new Point(130, 250));
             e.Graphics.DrawString("Function: " + BookFunction, new Font("Bahnschrift", 20, FontStyle.Regular), Brushes.Black, new Point(500, 250));
             e.Graphics.DrawString("Venue: " + BookVenue, new Font("Bahnschrift", 20, FontStyle.Regular), Brushes.Black, new Point(130, 300));
-            e.Graphics.DrawString("Equipments: " + BookEquip, new Font("Bahnschrift", 20, FontStyle.Regular), Brushes.Black, new Point(130, 350));
+            e.Graphics.DrawString("Equipments: " + BookEquip, new Font("Bahnschrift", 15, FontStyle.Regular), Brushes.Black, new Point(130, 350));
             e.Graphics.DrawString("Equipments Cost: " + BookIncCost, new Font("Bahnschrift", 20, FontStyle.Regular), Brushes.Black, new Point(130, 400));
             e.Graphics.DrawString("Other Costs: " + BookOther, new Font("Bahnschrift", 20, FontStyle.Regular), Brushes.Black, new Point(130, 650));
             e.Graphics.DrawString("Total: " + BookGrandTot, new Font("Bahnschrift", 20, FontStyle.Regular), Brushes.Black, new Point(130, 700));

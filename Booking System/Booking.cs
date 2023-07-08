@@ -16,6 +16,7 @@ namespace Booking_System
     public partial class Booking : Form
     {
         string name;
+        StringBuilder sb = new StringBuilder();
         public Booking(string name)
         {
             InitializeComponent();
@@ -88,12 +89,21 @@ namespace Booking_System
         private void IncludeCost_Click(object sender, EventArgs e)
         {
             int photography=0, videography=0, camera=0;
-            if (PhotographyCb.Checked && PhotographyPrice.Text!="")
+            if (PhotographyCb.Checked && PhotographyPrice.Text != "")
+            {
                 photography = Convert.ToInt32(PhotographyPrice.Text);
+                sb.Append("Photography: "+photography + " ");
+            }
             if (VideographyCb.Checked && VideographyPrice.Text != "")
+            {
                 videography = Convert.ToInt32(VideographyPrice.Text);
+                sb.Append("Videography: " + videography + " ");
+            }
             if (CameraCb.Checked && CameraPrice.Text != "")
+            {
                 camera = Convert.ToInt32(CameraPrice.Text);
+                sb.Append("Camera: " + camera + "");
+            }
             int incTot = photography + videography + camera;
             incTotal.Text = ""+incTot;
             calcTotal();
@@ -253,10 +263,7 @@ namespace Booking_System
 
             try
             {
-                StringBuilder sb = new StringBuilder();
-                if (PhotographyCb.Checked) { sb.Append("Photography "); }
-                if (VideographyCb.Checked) { sb.Append("Videography "); }
-                if (CameraCb.Checked) { sb.Append("Camera "); }
+                
 
                 BookingSchema newBooking = new BookingSchema
                 {
