@@ -22,6 +22,26 @@ namespace Booking_System
         {
             InitializeComponent();
             this.name = name;
+            //Program.ChangeFont(this);
+            label1.Font = new Font(Program.pfc2.Families[0], label1.Font.Size);
+            label12.Font = new Font(Program.pfc2.Families[0], label12.Font.Size);
+            but1.Font = new Font(Program.pfc.Families[1], but1.Font.Size);
+            but2.Font = new Font(Program.pfc.Families[1], but2.Font.Size);
+            but3.Font = new Font(Program.pfc.Families[1], but3.Font.Size);
+            but4.Font = new Font(Program.pfc.Families[1], but4.Font.Size);
+            but5.Font = new Font(Program.pfc.Families[1], but5.Font.Size);
+            but6.Font = new Font(Program.pfc.Families[1], but6.Font.Size);
+            label2.Font = new Font(Program.pfc.Families[1], label2.Font.Size);
+            label3.Font = new Font(Program.pfc.Families[1], label3.Font.Size);
+            label11.Font = new Font(Program.pfc.Families[1], label11.Font.Size);
+            label4.Font = new Font(Program.pfc.Families[1], label4.Font.Size);
+            label5.Font = new Font(Program.pfc.Families[1], label5.Font.Size);
+
+            StaffNameTb.Font = new Font(Program.pfc.Families[1], StaffNameTb.Font.Size);
+            StaffPhoneTb.Font = new Font(Program.pfc.Families[1], StaffPhoneTb.Font.Size);
+            StaffPasswordTb.Font = new Font(Program.pfc.Families[1], StaffPasswordTb.Font.Size);
+            StaffGenderCb.Font = new Font(Program.pfc.Families[1], StaffGenderCb.Font.Size);
+
         }
         //SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Sanskar\Documents\BookingDB.mdf;Integrated Security=True;Connect Timeout=30");
         MongoClient client = new MongoClient("mongodb+srv://Form:formpass@cluster0.ir7prkj.mongodb.net/?retryWrites=true&w=majority");
@@ -296,6 +316,11 @@ namespace Booking_System
             //home.name = "Hello Admin, welcome to booking app";
             home.Show();
             this.Hide();
+        }
+
+        private void StaffNameTb_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

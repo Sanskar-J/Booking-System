@@ -21,6 +21,22 @@ namespace Booking_System
         {
             InitializeComponent();
             this.name = name;
+            //Program.ChangeFont(this);
+            label1.Font = new Font(Program.pfc2.Families[0], label1.Font.Size);
+            label12.Font = new Font(Program.pfc2.Families[0], label12.Font.Size);
+            but1.Font = new Font(Program.pfc.Families[1], but1.Font.Size);
+            but2.Font = new Font(Program.pfc.Families[1], but2.Font.Size);
+            but3.Font = new Font(Program.pfc.Families[1], but3.Font.Size);
+            but4.Font = new Font(Program.pfc.Families[1], but4.Font.Size);
+            but5.Font = new Font(Program.pfc.Families[1], but5.Font.Size);
+            label2.Font = new Font(Program.pfc.Families[1], label2.Font.Size);
+            label3.Font = new Font(Program.pfc.Families[1], label3.Font.Size);
+            label11.Font = new Font(Program.pfc.Families[1], label11.Font.Size);
+            label5.Font = new Font(Program.pfc.Families[1], label5.Font.Size);
+            CustAddTb.Font = new Font(Program.pfc.Families[1], CustAddTb.Font.Size);
+            CustNameTb.Font = new Font(Program.pfc.Families[1], CustNameTb.Font.Size);
+            CustPhoneTb.Font = new Font(Program.pfc.Families[1], CustPhoneTb.Font.Size);
+
         }
         //exit button
         private void label12_Click(object sender, EventArgs e)

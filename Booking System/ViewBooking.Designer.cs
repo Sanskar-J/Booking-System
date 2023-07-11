@@ -38,8 +38,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.BookingsDGV = new Guna.UI2.WinForms.Guna2DataGridView();
             this.label3 = new System.Windows.Forms.Label();
-            this.bunifuThinButton24 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuThinButton23 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.but1 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.but2 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.panel1.SuspendLayout();
@@ -94,7 +94,6 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             this.BookingsDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.BookingsDGV.BackgroundColor = System.Drawing.Color.Silver;
-            this.BookingsDGV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 9.818182F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -163,57 +162,57 @@
             this.label3.TabIndex = 19;
             this.label3.Text = "Booking List";
             // 
-            // bunifuThinButton24
+            // but1
             // 
-            this.bunifuThinButton24.ActiveBorderThickness = 1;
-            this.bunifuThinButton24.ActiveCornerRadius = 20;
-            this.bunifuThinButton24.ActiveFillColor = System.Drawing.Color.Black;
-            this.bunifuThinButton24.ActiveForecolor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton24.ActiveLineColor = System.Drawing.Color.DimGray;
-            this.bunifuThinButton24.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuThinButton24.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton24.BackgroundImage")));
-            this.bunifuThinButton24.ButtonText = "Back";
-            this.bunifuThinButton24.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton24.ForeColor = System.Drawing.Color.Black;
-            this.bunifuThinButton24.IdleBorderThickness = 1;
-            this.bunifuThinButton24.IdleCornerRadius = 20;
-            this.bunifuThinButton24.IdleFillColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton24.IdleForecolor = System.Drawing.Color.Black;
-            this.bunifuThinButton24.IdleLineColor = System.Drawing.Color.Black;
-            this.bunifuThinButton24.Location = new System.Drawing.Point(288, 575);
-            this.bunifuThinButton24.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton24.Name = "bunifuThinButton24";
-            this.bunifuThinButton24.Size = new System.Drawing.Size(181, 41);
-            this.bunifuThinButton24.TabIndex = 18;
-            this.bunifuThinButton24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuThinButton24.Click += new System.EventHandler(this.bunifuThinButton24_Click);
+            this.but1.ActiveBorderThickness = 1;
+            this.but1.ActiveCornerRadius = 20;
+            this.but1.ActiveFillColor = System.Drawing.Color.Black;
+            this.but1.ActiveForecolor = System.Drawing.Color.Transparent;
+            this.but1.ActiveLineColor = System.Drawing.Color.DimGray;
+            this.but1.BackColor = System.Drawing.SystemColors.Control;
+            this.but1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("but1.BackgroundImage")));
+            this.but1.ButtonText = "Back";
+            this.but1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.but1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.but1.ForeColor = System.Drawing.Color.Black;
+            this.but1.IdleBorderThickness = 1;
+            this.but1.IdleCornerRadius = 20;
+            this.but1.IdleFillColor = System.Drawing.Color.Transparent;
+            this.but1.IdleForecolor = System.Drawing.Color.Black;
+            this.but1.IdleLineColor = System.Drawing.Color.Black;
+            this.but1.Location = new System.Drawing.Point(288, 575);
+            this.but1.Margin = new System.Windows.Forms.Padding(5);
+            this.but1.Name = "but1";
+            this.but1.Size = new System.Drawing.Size(181, 41);
+            this.but1.TabIndex = 18;
+            this.but1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.but1.Click += new System.EventHandler(this.bunifuThinButton24_Click);
             // 
-            // bunifuThinButton23
+            // but2
             // 
-            this.bunifuThinButton23.ActiveBorderThickness = 1;
-            this.bunifuThinButton23.ActiveCornerRadius = 20;
-            this.bunifuThinButton23.ActiveFillColor = System.Drawing.Color.Black;
-            this.bunifuThinButton23.ActiveForecolor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton23.ActiveLineColor = System.Drawing.Color.DimGray;
-            this.bunifuThinButton23.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuThinButton23.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton23.BackgroundImage")));
-            this.bunifuThinButton23.ButtonText = "Delete Booking";
-            this.bunifuThinButton23.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton23.ForeColor = System.Drawing.Color.Black;
-            this.bunifuThinButton23.IdleBorderThickness = 1;
-            this.bunifuThinButton23.IdleCornerRadius = 20;
-            this.bunifuThinButton23.IdleFillColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton23.IdleForecolor = System.Drawing.Color.Black;
-            this.bunifuThinButton23.IdleLineColor = System.Drawing.Color.Black;
-            this.bunifuThinButton23.Location = new System.Drawing.Point(479, 575);
-            this.bunifuThinButton23.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton23.Name = "bunifuThinButton23";
-            this.bunifuThinButton23.Size = new System.Drawing.Size(181, 41);
-            this.bunifuThinButton23.TabIndex = 17;
-            this.bunifuThinButton23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuThinButton23.Click += new System.EventHandler(this.bunifuThinButton23_Click);
+            this.but2.ActiveBorderThickness = 1;
+            this.but2.ActiveCornerRadius = 20;
+            this.but2.ActiveFillColor = System.Drawing.Color.Black;
+            this.but2.ActiveForecolor = System.Drawing.Color.Transparent;
+            this.but2.ActiveLineColor = System.Drawing.Color.DimGray;
+            this.but2.BackColor = System.Drawing.SystemColors.Control;
+            this.but2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("but2.BackgroundImage")));
+            this.but2.ButtonText = "Delete Booking";
+            this.but2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.but2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.but2.ForeColor = System.Drawing.Color.Black;
+            this.but2.IdleBorderThickness = 1;
+            this.but2.IdleCornerRadius = 20;
+            this.but2.IdleFillColor = System.Drawing.Color.Transparent;
+            this.but2.IdleForecolor = System.Drawing.Color.Black;
+            this.but2.IdleLineColor = System.Drawing.Color.Black;
+            this.but2.Location = new System.Drawing.Point(479, 575);
+            this.but2.Margin = new System.Windows.Forms.Padding(5);
+            this.but2.Name = "but2";
+            this.but2.Size = new System.Drawing.Size(181, 41);
+            this.but2.TabIndex = 17;
+            this.but2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.but2.Click += new System.EventHandler(this.bunifuThinButton23_Click);
             // 
             // printPreviewDialog1
             // 
@@ -236,8 +235,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(962, 676);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.bunifuThinButton24);
-            this.Controls.Add(this.bunifuThinButton23);
+            this.Controls.Add(this.but1);
+            this.Controls.Add(this.but2);
             this.Controls.Add(this.BookingsDGV);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -260,8 +259,8 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2DataGridView BookingsDGV;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton24;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton23;
+        private Bunifu.Framework.UI.BunifuThinButton2 but1;
+        private Bunifu.Framework.UI.BunifuThinButton2 but2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Drawing.Printing.PrintDocument printDocument1;

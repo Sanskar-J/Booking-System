@@ -26,6 +26,13 @@ namespace Booking_System
         {
             this.name = name;
             InitializeComponent();
+            label12.Font = new Font(Program.pfc2.Families[0], label12.Font.Size);
+            but1.Font= new Font(Program.pfc.Families[1], but1.Font.Size);
+            but2.Font = new Font(Program.pfc.Families[1], but2.Font.Size);
+            but3.Font = new Font(Program.pfc.Families[1], but3.Font.Size);
+            but4.Font = new Font(Program.pfc.Families[1], but4.Font.Size);
+            helloLbl.Font= new Font(Program.pfc2.Families[0], helloLbl.Font.Size);
+
             helloLbl.Text = $"Hello {name}, welcome to booking app";
 
         }

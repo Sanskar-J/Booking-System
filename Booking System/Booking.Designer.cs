@@ -142,15 +142,15 @@
             // 
             // TimeCb
             // 
-            this.TimeCb.Font = new System.Drawing.Font("Bahnschrift Condensed", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TimeCb.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TimeCb.FormattingEnabled = true;
             this.TimeCb.Items.AddRange(new object[] {
             "Day",
             "Night",
             "Full Day"});
-            this.TimeCb.Location = new System.Drawing.Point(481, 105);
+            this.TimeCb.Location = new System.Drawing.Point(481, 104);
             this.TimeCb.Name = "TimeCb";
-            this.TimeCb.Size = new System.Drawing.Size(121, 30);
+            this.TimeCb.Size = new System.Drawing.Size(121, 33);
             this.TimeCb.TabIndex = 8;
             // 
             // label4
@@ -167,19 +167,20 @@
             // FunctionTb
             // 
             this.FunctionTb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.FunctionTb.Font = new System.Drawing.Font("Bahnschrift Condensed", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FunctionTb.Location = new System.Drawing.Point(739, 108);
+            this.FunctionTb.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FunctionTb.Location = new System.Drawing.Point(739, 104);
             this.FunctionTb.Name = "FunctionTb";
-            this.FunctionTb.Size = new System.Drawing.Size(188, 29);
+            this.FunctionTb.Size = new System.Drawing.Size(188, 33);
             this.FunctionTb.TabIndex = 10;
+            this.FunctionTb.TextChanged += new System.EventHandler(this.FunctionTb_TextChanged);
             // 
             // VenueTb
             // 
             this.VenueTb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.VenueTb.Font = new System.Drawing.Font("Bahnschrift Condensed", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VenueTb.Location = new System.Drawing.Point(739, 157);
+            this.VenueTb.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VenueTb.Location = new System.Drawing.Point(739, 155);
             this.VenueTb.Name = "VenueTb";
-            this.VenueTb.Size = new System.Drawing.Size(188, 29);
+            this.VenueTb.Size = new System.Drawing.Size(188, 33);
             this.VenueTb.TabIndex = 12;
             // 
             // label5
@@ -441,7 +442,7 @@
             this.bunifuThinButton24.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton24.BackgroundImage")));
             this.bunifuThinButton24.ButtonText = "Add Booking";
             this.bunifuThinButton24.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton24.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuThinButton24.ForeColor = System.Drawing.Color.Black;
             this.bunifuThinButton24.IdleBorderThickness = 1;
             this.bunifuThinButton24.IdleCornerRadius = 20;
@@ -467,7 +468,7 @@
             this.bunifuThinButton23.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton23.BackgroundImage")));
             this.bunifuThinButton23.ButtonText = "Reset";
             this.bunifuThinButton23.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton23.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuThinButton23.ForeColor = System.Drawing.Color.Black;
             this.bunifuThinButton23.IdleBorderThickness = 1;
             this.bunifuThinButton23.IdleCornerRadius = 20;
@@ -484,7 +485,7 @@
             // 
             // CustomerIdCb
             // 
-            this.CustomerIdCb.Font = new System.Drawing.Font("Bahnschrift Condensed", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CustomerIdCb.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CustomerIdCb.FormattingEnabled = true;
             this.CustomerIdCb.Items.AddRange(new object[] {
             "Day",
@@ -492,7 +493,7 @@
             "Full Day"});
             this.CustomerIdCb.Location = new System.Drawing.Point(231, 154);
             this.CustomerIdCb.Name = "CustomerIdCb";
-            this.CustomerIdCb.Size = new System.Drawing.Size(162, 30);
+            this.CustomerIdCb.Size = new System.Drawing.Size(162, 33);
             this.CustomerIdCb.TabIndex = 18;
             this.CustomerIdCb.SelectionChangeCommitted += new System.EventHandler(this.CustomerIdCb_SelectionChangeCommitted);
             // 
@@ -528,7 +529,7 @@
             this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
             this.bunifuThinButton21.ButtonText = "Home";
             this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton21.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuThinButton21.ForeColor = System.Drawing.Color.Black;
             this.bunifuThinButton21.IdleBorderThickness = 1;
             this.bunifuThinButton21.IdleCornerRadius = 20;

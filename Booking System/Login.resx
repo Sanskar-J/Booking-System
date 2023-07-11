@@ -321,7 +321,7 @@
         bBEAAORmiwAAIDdbBAAAudkiAADIzRYBAEButggAADL748T/AXt27VeoMPqFAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="bunifuThinButton21.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="mainLoginButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAALUAAAApCAYAAABz92iRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAAEOoAABDqAYLTCpgAAAH3SURBVHhe7dwts4FBGIBhURRFURRFURRFP0MT/QxRFEVR

@@ -10,18 +10,41 @@ using System.Windows.Forms;
 //using System.Data.SqlClient;
 using MongoDB.Driver;
 using MongoDB.Bson;
+using Twilio;
+using Twilio.Rest.Api.V2010.Account;
+using Twilio.Types;
+//using System.Web.UI;
+
 
 namespace Booking_System
 {
     public partial class Booking : Form
     {
         string name;
+        string rec_num = "";
         StringBuilder sb = new StringBuilder();
         public Booking(string name)
         {
             InitializeComponent();
             this.name = name;
+            Program.ChangeFont(this);
+            label1.Font = new Font(Program.pfc2.Families[0], label1.Font.Size);
+            label12.Font = new Font(Program.pfc2.Families[0], label12.Font.Size);
+            //label2.Font = new Font(Program.pfc.Families[1], label2.Font.Size);
+            //label3.Font = new Font(Program.pfc.Families[1], label3.Font.Size);
+            //label4.Font = new Font(Program.pfc.Families[1], label4.Font.Size);
+            //label5.Font = new Font(Program.pfc.Families[1], label5.Font.Size);
+            //label6.Font = new Font(Program.pfc.Families[1], label6.Font.Size);
+            //label7.Font = new Font(Program.pfc.Families[1], label7.Font.Size);
+            //label8.Font = new Font(Program.pfc.Families[1], label8.Font.Size);
+            //label9.Font = new Font(Program.pfc.Families[1], label9.Font.Size);
+            //label10.Font = new Font(Program.pfc.Families[1], label10.Font.Size);
+            //label11.Font = new Font(Program.pfc.Families[1], label11.Font.Size);
+            
+
         }
+        
+
         MongoClient client = new MongoClient("mongodb+srv://Form:formpass@cluster0.ir7prkj.mongodb.net/?retryWrites=true&w=majority");
 
         //SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Sanskar\Documents\BookingDB.mdf;Integrated Security=True;Connect Timeout=30");
@@ -183,6 +206,7 @@ namespace Booking_System
                 if (customerBooking != null)
                 {
                     string customerName = customerBooking.CustName;
+                    this.rec_num = customerBooking.CustPhone;
                     CustNameLbl.Text = customerName;
 
 
@@ -263,7 +287,11 @@ namespace Booking_System
 
             try
             {
-                
+
+                string accountSid = "AC38a2369d1e07614caeeaea6d497472f0";
+                string authToken = "7c6258b8f6936663148f4375f0c5a605";
+
+                TwilioClient.Init(accountSid, authToken);
 
                 BookingSchema newBooking = new BookingSchema
                 {
@@ -285,6 +313,13 @@ namespace Booking_System
 
 
                 collection.InsertOne(newBooking);
+                var message = MessageResource.Create(
+                    from: new PhoneNumber("whatsapp:+14155238886"),
+                    to: new PhoneNumber("whatsapp:"+rec_num),
+                    body: $"Hello {CustNameLbl.Text}! Your Photography booking is Successful!, Commo allez-vous?"
+                );
+
+                Console.WriteLine("SMS sent. Message SID: " + message.Sid);
 
 
                 MessageBox.Show("Data inserted successfully!");
@@ -335,6 +370,11 @@ namespace Booking_System
             MainForm Home = new MainForm(name);
             Home.Show();
             this.Hide();
+        }
+
+        private void FunctionTb_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

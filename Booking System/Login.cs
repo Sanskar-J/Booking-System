@@ -26,6 +26,24 @@ namespace Booking_System
         {
             InitializeComponent();
             LoadSavedCredentials();
+            
+            mainLoginButton.Font = new Font(Program.pfc.Families[1], mainLoginButton.Font.Size);
+            label1.Font = new Font(Program.pfc2.Families[0], label1.Font.Size);
+            label2.Font = new Font(Program.pfc.Families[1], label2.Font.Size );
+            
+            label3.Font = new Font(Program.pfc.Families[1], label3.Font.Size);
+            UsernameTb.Font = new Font(Program.pfc.Families[1], UsernameTb.Font.Size);
+            PassTb.Font = new Font(Program.pfc.Families[1], PassTb.Font.Size);
+            RememberMe.Font = new Font(Program.pfc.Families[1], RememberMe.Font.Size);
+            AdminLogin.Font = new Font(Program.pfc.Families[1], AdminLogin.Font.Size);
+            label12.Font= new Font(Program.pfc2.Families[0], label12.Font.Size);
+
+
+
+
+
+
+
             this.name = name;
         }
         MongoClient client = new MongoClient("mongodb+srv://Form:formpass@cluster0.ir7prkj.mongodb.net/?retryWrites=true&w=majority");
@@ -246,6 +264,11 @@ namespace Booking_System
         {
             AdminLogin.BackColor = Color.Black;
             AdminLogin.ForeColor = Color.White;
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

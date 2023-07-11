@@ -21,6 +21,14 @@ namespace Booking_System
         {
             InitializeComponent();
             this.name = name;
+            //Program.ChangeFont(this);
+            label1.Font = new Font(Program.pfc2.Families[0], label1.Font.Size);
+            label12.Font = new Font(Program.pfc2.Families[0], label12.Font.Size);
+            label3.Font = new Font(Program.pfc.Families[1], label3.Font.Size);
+
+            but1.Font = new Font(Program.pfc.Families[1], but1.Font.Size);
+            but2.Font = new Font(Program.pfc.Families[1], but2.Font.Size);
+
         }
         MongoClient client = new MongoClient("mongodb+srv://Form:formpass@cluster0.ir7prkj.mongodb.net/?retryWrites=true&w=majority");
 
@@ -164,21 +172,21 @@ namespace Booking_System
             String BookBy = BookingsDGV.SelectedRows[0].Cells[12].Value.ToString();
 
 
-            e.Graphics.DrawString("Booking Summary", new Font("Bebas Neue", 30,FontStyle.Regular),Brushes.Red,new Point(250));
+            e.Graphics.DrawString("Booking Summary", new Font(Program.pfc2.Families[0], 30,FontStyle.Regular),Brushes.Red,new Point(250));
 
-            e.Graphics.DrawString("Booking Id: "+BookId, new Font("Bahnschrift",20,FontStyle.Regular),Brushes.Black,new Point(130,150));
-            e.Graphics.DrawString("Booking Date: " + BookDate, new Font("Bahnschrift", 20, FontStyle.Regular), Brushes.Black, new Point(130, 200));
-            e.Graphics.DrawString("Booking Time: " + BookTime, new Font("Bahnschrift", 20, FontStyle.Regular), Brushes.Black, new Point(500, 200));
-            e.Graphics.DrawString("Name: " + BookCustName, new Font("Bahnschrift", 20, FontStyle.Regular), Brushes.Black, new Point(130, 250));
-            e.Graphics.DrawString("Function: " + BookFunction, new Font("Bahnschrift", 20, FontStyle.Regular), Brushes.Black, new Point(500, 250));
-            e.Graphics.DrawString("Venue: " + BookVenue, new Font("Bahnschrift", 20, FontStyle.Regular), Brushes.Black, new Point(130, 300));
-            e.Graphics.DrawString("Equipments: " + BookEquip, new Font("Bahnschrift", 15, FontStyle.Regular), Brushes.Black, new Point(130, 350));
-            e.Graphics.DrawString("Equipments Cost: " + BookIncCost, new Font("Bahnschrift", 20, FontStyle.Regular), Brushes.Black, new Point(130, 400));
-            e.Graphics.DrawString("Other Costs: " + BookOther, new Font("Bahnschrift", 20, FontStyle.Regular), Brushes.Black, new Point(130, 650));
-            e.Graphics.DrawString("Total: " + BookGrandTot, new Font("Bahnschrift", 20, FontStyle.Regular), Brushes.Black, new Point(130, 700));
-            e.Graphics.DrawString("Advance: " + BookAdvance, new Font("Bahnschrift", 20, FontStyle.Regular), Brushes.Black, new Point(500, 650));
-            e.Graphics.DrawString("Balance: " + BookBalance, new Font("Bahnschrift", 20, FontStyle.Regular), Brushes.Black, new Point(500, 700));
-            e.Graphics.DrawString("Booked By: " + BookBy, new Font("Bahnschrift", 20, FontStyle.Regular), Brushes.Black, new Point(130, 900));
+            e.Graphics.DrawString("Booking Id: "+BookId, new Font(Program.pfc.Families[1], 20,FontStyle.Regular),Brushes.Black,new Point(130,150));
+            e.Graphics.DrawString("Booking Date: " + BookDate, new Font(Program.pfc.Families[1], 20, FontStyle.Regular), Brushes.Black, new Point(130, 200));
+            e.Graphics.DrawString("Booking Time: " + BookTime, new Font(Program.pfc.Families[1], 20, FontStyle.Regular), Brushes.Black, new Point(500, 200));
+            e.Graphics.DrawString("Name: " + BookCustName, new Font(Program.pfc.Families[1], 20, FontStyle.Regular), Brushes.Black, new Point(130, 250));
+            e.Graphics.DrawString("Function: " + BookFunction, new Font(Program.pfc.Families[1], 20, FontStyle.Regular), Brushes.Black, new Point(500, 250));
+            e.Graphics.DrawString("Venue: " + BookVenue, new Font(Program.pfc.Families[1], 20, FontStyle.Regular), Brushes.Black, new Point(130, 300));
+            e.Graphics.DrawString("Equipments: " + BookEquip, new Font(Program.pfc.Families[1], 15, FontStyle.Regular), Brushes.Black, new Point(130, 350));
+            e.Graphics.DrawString("Equipments Cost: " + BookIncCost, new Font(Program.pfc.Families[1], 15, FontStyle.Regular), Brushes.Black, new Point(130, 400));
+            e.Graphics.DrawString("Other Costs: " + BookOther, new Font(Program.pfc.Families[1], 20, FontStyle.Regular), Brushes.Black, new Point(130, 650));
+            e.Graphics.DrawString("Total: " + BookGrandTot, new Font(Program.pfc.Families[1], 20, FontStyle.Regular), Brushes.Black, new Point(130, 700));
+            e.Graphics.DrawString("Advance: " + BookAdvance, new Font(Program.pfc.Families[1], 20, FontStyle.Regular), Brushes.Black, new Point(500, 650));
+            e.Graphics.DrawString("Balance: " + BookBalance, new Font(Program.pfc.Families[1], 20, FontStyle.Regular), Brushes.Black, new Point(500, 700));
+            e.Graphics.DrawString("Booked By: " + BookBy, new Font(Program.pfc.Families[1], 20, FontStyle.Regular), Brushes.Black, new Point(130, 900));
 
             Pen blackPen = new Pen(Color.Black, 3);
 

@@ -34,7 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.AdminTb = new System.Windows.Forms.TextBox();
-            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.logButton = new Bunifu.Framework.UI.BunifuThinButton2();
             this.AdminLogin = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -97,31 +97,31 @@
             this.AdminTb.Size = new System.Drawing.Size(204, 33);
             this.AdminTb.TabIndex = 7;
             // 
-            // bunifuThinButton21
+            // logButton
             // 
-            this.bunifuThinButton21.ActiveBorderThickness = 1;
-            this.bunifuThinButton21.ActiveCornerRadius = 20;
-            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.Black;
-            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.DimGray;
-            this.bunifuThinButton21.BackColor = System.Drawing.Color.White;
-            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
-            this.bunifuThinButton21.ButtonText = "LOGIN";
-            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton21.ForeColor = System.Drawing.Color.Black;
-            this.bunifuThinButton21.IdleBorderThickness = 1;
-            this.bunifuThinButton21.IdleCornerRadius = 20;
-            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.Black;
-            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.Black;
-            this.bunifuThinButton21.Location = new System.Drawing.Point(108, 140);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(181, 41);
-            this.bunifuThinButton21.TabIndex = 9;
-            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
+            this.logButton.ActiveBorderThickness = 1;
+            this.logButton.ActiveCornerRadius = 20;
+            this.logButton.ActiveFillColor = System.Drawing.Color.Black;
+            this.logButton.ActiveForecolor = System.Drawing.Color.White;
+            this.logButton.ActiveLineColor = System.Drawing.Color.DimGray;
+            this.logButton.BackColor = System.Drawing.Color.White;
+            this.logButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logButton.BackgroundImage")));
+            this.logButton.ButtonText = "LOGIN";
+            this.logButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.logButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logButton.ForeColor = System.Drawing.Color.Black;
+            this.logButton.IdleBorderThickness = 1;
+            this.logButton.IdleCornerRadius = 20;
+            this.logButton.IdleFillColor = System.Drawing.Color.White;
+            this.logButton.IdleForecolor = System.Drawing.Color.Black;
+            this.logButton.IdleLineColor = System.Drawing.Color.Black;
+            this.logButton.Location = new System.Drawing.Point(108, 140);
+            this.logButton.Margin = new System.Windows.Forms.Padding(5);
+            this.logButton.Name = "logButton";
+            this.logButton.Size = new System.Drawing.Size(181, 41);
+            this.logButton.TabIndex = 9;
+            this.logButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.logButton.Click += new System.EventHandler(this.bunifuThinButton21_Click);
             // 
             // AdminLogin
             // 
@@ -147,7 +147,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(402, 236);
             this.Controls.Add(this.AdminLogin);
-            this.Controls.Add(this.bunifuThinButton21);
+            this.Controls.Add(this.logButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.AdminTb);
             this.Controls.Add(this.panel1);
@@ -168,7 +168,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label1;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
+        private Bunifu.Framework.UI.BunifuThinButton2 logButton;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox AdminTb;
         private System.Windows.Forms.Label AdminLogin;

@@ -16,6 +16,12 @@ namespace Booking_System
         public Admin(string name)
         {
             InitializeComponent();
+            label1.Font= new Font(Program.pfc2.Families[0], label1.Font.Size);
+            label2.Font= new Font(Program.pfc.Families[1], label2.Font.Size);
+            label12.Font= new Font(Program.pfc2.Families[0], label12.Font.Size);
+            AdminTb.Font= new Font(Program.pfc.Families[1], AdminTb.Font.Size);
+            logButton.Font= new Font(Program.pfc.Families[1], logButton.Font.Size);
+            AdminLogin.Font= new Font(Program.pfc.Families[1], AdminLogin.Font.Size);
             this.name = name;
         }
 

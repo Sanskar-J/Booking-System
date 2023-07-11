@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Customer));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
@@ -44,11 +44,11 @@
             this.CustNameTb = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.CustomerDGV = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.bunifuThinButton25 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuThinButton24 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuThinButton23 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.but5 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.but3 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.but4 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.but1 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.but2 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CustomerDGV)).BeginInit();
             this.SuspendLayout();
@@ -105,10 +105,10 @@
             // CustAddTb
             // 
             this.CustAddTb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CustAddTb.Font = new System.Drawing.Font("Bahnschrift Condensed", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CustAddTb.Location = new System.Drawing.Point(722, 104);
+            this.CustAddTb.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CustAddTb.Location = new System.Drawing.Point(722, 101);
             this.CustAddTb.Name = "CustAddTb";
-            this.CustAddTb.Size = new System.Drawing.Size(189, 29);
+            this.CustAddTb.Size = new System.Drawing.Size(189, 33);
             this.CustAddTb.TabIndex = 42;
             // 
             // label3
@@ -125,10 +125,10 @@
             // CustPhoneTb
             // 
             this.CustPhoneTb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CustPhoneTb.Font = new System.Drawing.Font("Bahnschrift Condensed", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CustPhoneTb.Location = new System.Drawing.Point(395, 104);
+            this.CustPhoneTb.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CustPhoneTb.Location = new System.Drawing.Point(395, 101);
             this.CustPhoneTb.Name = "CustPhoneTb";
-            this.CustPhoneTb.Size = new System.Drawing.Size(189, 29);
+            this.CustPhoneTb.Size = new System.Drawing.Size(189, 33);
             this.CustPhoneTb.TabIndex = 40;
             // 
             // label2
@@ -145,10 +145,10 @@
             // CustNameTb
             // 
             this.CustNameTb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CustNameTb.Font = new System.Drawing.Font("Bahnschrift Condensed", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CustNameTb.Location = new System.Drawing.Point(117, 104);
+            this.CustNameTb.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CustNameTb.Location = new System.Drawing.Point(117, 101);
             this.CustNameTb.Name = "CustNameTb";
-            this.CustNameTb.Size = new System.Drawing.Size(189, 29);
+            this.CustNameTb.Size = new System.Drawing.Size(189, 33);
             this.CustNameTb.TabIndex = 38;
             // 
             // label11
@@ -165,44 +165,43 @@
             // CustomerDGV
             // 
             this.CustomerDGV.AllowUserToResizeRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Bahnschrift Condensed", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            this.CustomerDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bahnschrift Condensed", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.CustomerDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.CustomerDGV.BackgroundColor = System.Drawing.Color.Silver;
-            this.CustomerDGV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 9.818182F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.CustomerDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 9.818182F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.CustomerDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.CustomerDGV.ColumnHeadersHeight = 28;
             this.CustomerDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Bahnschrift Condensed", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.CustomerDGV.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Bahnschrift Condensed", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.CustomerDGV.DefaultCellStyle = dataGridViewCellStyle3;
             this.CustomerDGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.CustomerDGV.Location = new System.Drawing.Point(56, 268);
             this.CustomerDGV.Name = "CustomerDGV";
             this.CustomerDGV.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.CustomerDGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.CustomerDGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.CustomerDGV.RowHeadersVisible = false;
             this.CustomerDGV.RowHeadersWidth = 47;
             this.CustomerDGV.Size = new System.Drawing.Size(855, 286);
@@ -230,148 +229,148 @@
             this.CustomerDGV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Silver;
             this.CustomerDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CustomerDGV_CellContentClick);
             // 
-            // bunifuThinButton25
+            // but5
             // 
-            this.bunifuThinButton25.ActiveBorderThickness = 1;
-            this.bunifuThinButton25.ActiveCornerRadius = 20;
-            this.bunifuThinButton25.ActiveFillColor = System.Drawing.Color.Black;
-            this.bunifuThinButton25.ActiveForecolor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton25.ActiveLineColor = System.Drawing.Color.DimGray;
-            this.bunifuThinButton25.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuThinButton25.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton25.BackgroundImage")));
-            this.bunifuThinButton25.ButtonText = "Back";
-            this.bunifuThinButton25.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton25.ForeColor = System.Drawing.Color.Black;
-            this.bunifuThinButton25.IdleBorderThickness = 1;
-            this.bunifuThinButton25.IdleCornerRadius = 20;
-            this.bunifuThinButton25.IdleFillColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton25.IdleForecolor = System.Drawing.Color.Black;
-            this.bunifuThinButton25.IdleLineColor = System.Drawing.Color.Black;
-            this.bunifuThinButton25.Location = new System.Drawing.Point(395, 597);
-            this.bunifuThinButton25.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton25.Name = "bunifuThinButton25";
-            this.bunifuThinButton25.Size = new System.Drawing.Size(181, 41);
-            this.bunifuThinButton25.TabIndex = 51;
-            this.bunifuThinButton25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuThinButton25.Click += new System.EventHandler(this.bunifuThinButton25_Click);
+            this.but5.ActiveBorderThickness = 1;
+            this.but5.ActiveCornerRadius = 20;
+            this.but5.ActiveFillColor = System.Drawing.Color.Black;
+            this.but5.ActiveForecolor = System.Drawing.Color.Transparent;
+            this.but5.ActiveLineColor = System.Drawing.Color.DimGray;
+            this.but5.BackColor = System.Drawing.SystemColors.Control;
+            this.but5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("but5.BackgroundImage")));
+            this.but5.ButtonText = "Back";
+            this.but5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.but5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.but5.ForeColor = System.Drawing.Color.Black;
+            this.but5.IdleBorderThickness = 1;
+            this.but5.IdleCornerRadius = 20;
+            this.but5.IdleFillColor = System.Drawing.Color.Transparent;
+            this.but5.IdleForecolor = System.Drawing.Color.Black;
+            this.but5.IdleLineColor = System.Drawing.Color.Black;
+            this.but5.Location = new System.Drawing.Point(395, 597);
+            this.but5.Margin = new System.Windows.Forms.Padding(5);
+            this.but5.Name = "but5";
+            this.but5.Size = new System.Drawing.Size(181, 41);
+            this.but5.TabIndex = 51;
+            this.but5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.but5.Click += new System.EventHandler(this.bunifuThinButton25_Click);
             // 
-            // bunifuThinButton21
+            // but3
             // 
-            this.bunifuThinButton21.ActiveBorderThickness = 1;
-            this.bunifuThinButton21.ActiveCornerRadius = 20;
-            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.Black;
-            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.DimGray;
-            this.bunifuThinButton21.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
-            this.bunifuThinButton21.ButtonText = "Edit Customer";
-            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton21.ForeColor = System.Drawing.Color.Black;
-            this.bunifuThinButton21.IdleBorderThickness = 1;
-            this.bunifuThinButton21.IdleCornerRadius = 20;
-            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.Black;
-            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.Black;
-            this.bunifuThinButton21.Location = new System.Drawing.Point(499, 161);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(181, 41);
-            this.bunifuThinButton21.TabIndex = 48;
-            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
+            this.but3.ActiveBorderThickness = 1;
+            this.but3.ActiveCornerRadius = 20;
+            this.but3.ActiveFillColor = System.Drawing.Color.Black;
+            this.but3.ActiveForecolor = System.Drawing.Color.Transparent;
+            this.but3.ActiveLineColor = System.Drawing.Color.DimGray;
+            this.but3.BackColor = System.Drawing.SystemColors.Control;
+            this.but3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("but3.BackgroundImage")));
+            this.but3.ButtonText = "Edit Customer";
+            this.but3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.but3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.but3.ForeColor = System.Drawing.Color.Black;
+            this.but3.IdleBorderThickness = 1;
+            this.but3.IdleCornerRadius = 20;
+            this.but3.IdleFillColor = System.Drawing.Color.Transparent;
+            this.but3.IdleForecolor = System.Drawing.Color.Black;
+            this.but3.IdleLineColor = System.Drawing.Color.Black;
+            this.but3.Location = new System.Drawing.Point(499, 161);
+            this.but3.Margin = new System.Windows.Forms.Padding(5);
+            this.but3.Name = "but3";
+            this.but3.Size = new System.Drawing.Size(181, 41);
+            this.but3.TabIndex = 48;
+            this.but3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.but3.Click += new System.EventHandler(this.bunifuThinButton21_Click);
             // 
-            // bunifuThinButton22
+            // but4
             // 
-            this.bunifuThinButton22.ActiveBorderThickness = 1;
-            this.bunifuThinButton22.ActiveCornerRadius = 20;
-            this.bunifuThinButton22.ActiveFillColor = System.Drawing.Color.Black;
-            this.bunifuThinButton22.ActiveForecolor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton22.ActiveLineColor = System.Drawing.Color.DimGray;
-            this.bunifuThinButton22.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuThinButton22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton22.BackgroundImage")));
-            this.bunifuThinButton22.ButtonText = "Reset";
-            this.bunifuThinButton22.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton22.ForeColor = System.Drawing.Color.Black;
-            this.bunifuThinButton22.IdleBorderThickness = 1;
-            this.bunifuThinButton22.IdleCornerRadius = 20;
-            this.bunifuThinButton22.IdleFillColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton22.IdleForecolor = System.Drawing.Color.Black;
-            this.bunifuThinButton22.IdleLineColor = System.Drawing.Color.Black;
-            this.bunifuThinButton22.Location = new System.Drawing.Point(690, 161);
-            this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton22.Name = "bunifuThinButton22";
-            this.bunifuThinButton22.Size = new System.Drawing.Size(181, 41);
-            this.bunifuThinButton22.TabIndex = 47;
-            this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuThinButton22.Click += new System.EventHandler(this.bunifuThinButton22_Click);
+            this.but4.ActiveBorderThickness = 1;
+            this.but4.ActiveCornerRadius = 20;
+            this.but4.ActiveFillColor = System.Drawing.Color.Black;
+            this.but4.ActiveForecolor = System.Drawing.Color.Transparent;
+            this.but4.ActiveLineColor = System.Drawing.Color.DimGray;
+            this.but4.BackColor = System.Drawing.SystemColors.Control;
+            this.but4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("but4.BackgroundImage")));
+            this.but4.ButtonText = "Reset";
+            this.but4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.but4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.but4.ForeColor = System.Drawing.Color.Black;
+            this.but4.IdleBorderThickness = 1;
+            this.but4.IdleCornerRadius = 20;
+            this.but4.IdleFillColor = System.Drawing.Color.Transparent;
+            this.but4.IdleForecolor = System.Drawing.Color.Black;
+            this.but4.IdleLineColor = System.Drawing.Color.Black;
+            this.but4.Location = new System.Drawing.Point(690, 161);
+            this.but4.Margin = new System.Windows.Forms.Padding(5);
+            this.but4.Name = "but4";
+            this.but4.Size = new System.Drawing.Size(181, 41);
+            this.but4.TabIndex = 47;
+            this.but4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.but4.Click += new System.EventHandler(this.bunifuThinButton22_Click);
             // 
-            // bunifuThinButton24
+            // but1
             // 
-            this.bunifuThinButton24.ActiveBorderThickness = 1;
-            this.bunifuThinButton24.ActiveCornerRadius = 20;
-            this.bunifuThinButton24.ActiveFillColor = System.Drawing.Color.Black;
-            this.bunifuThinButton24.ActiveForecolor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton24.ActiveLineColor = System.Drawing.Color.DimGray;
-            this.bunifuThinButton24.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuThinButton24.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton24.BackgroundImage")));
-            this.bunifuThinButton24.ButtonText = "Add Customer";
-            this.bunifuThinButton24.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton24.ForeColor = System.Drawing.Color.Black;
-            this.bunifuThinButton24.IdleBorderThickness = 1;
-            this.bunifuThinButton24.IdleCornerRadius = 20;
-            this.bunifuThinButton24.IdleFillColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton24.IdleForecolor = System.Drawing.Color.Black;
-            this.bunifuThinButton24.IdleLineColor = System.Drawing.Color.Black;
-            this.bunifuThinButton24.Location = new System.Drawing.Point(117, 161);
-            this.bunifuThinButton24.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton24.Name = "bunifuThinButton24";
-            this.bunifuThinButton24.Size = new System.Drawing.Size(181, 41);
-            this.bunifuThinButton24.TabIndex = 46;
-            this.bunifuThinButton24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuThinButton24.Click += new System.EventHandler(this.bunifuThinButton24_Click);
+            this.but1.ActiveBorderThickness = 1;
+            this.but1.ActiveCornerRadius = 20;
+            this.but1.ActiveFillColor = System.Drawing.Color.Black;
+            this.but1.ActiveForecolor = System.Drawing.Color.Transparent;
+            this.but1.ActiveLineColor = System.Drawing.Color.DimGray;
+            this.but1.BackColor = System.Drawing.SystemColors.Control;
+            this.but1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("but1.BackgroundImage")));
+            this.but1.ButtonText = "Add Customer";
+            this.but1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.but1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.but1.ForeColor = System.Drawing.Color.Black;
+            this.but1.IdleBorderThickness = 1;
+            this.but1.IdleCornerRadius = 20;
+            this.but1.IdleFillColor = System.Drawing.Color.Transparent;
+            this.but1.IdleForecolor = System.Drawing.Color.Black;
+            this.but1.IdleLineColor = System.Drawing.Color.Black;
+            this.but1.Location = new System.Drawing.Point(117, 161);
+            this.but1.Margin = new System.Windows.Forms.Padding(5);
+            this.but1.Name = "but1";
+            this.but1.Size = new System.Drawing.Size(181, 41);
+            this.but1.TabIndex = 46;
+            this.but1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.but1.Click += new System.EventHandler(this.bunifuThinButton24_Click);
             // 
-            // bunifuThinButton23
+            // but2
             // 
-            this.bunifuThinButton23.ActiveBorderThickness = 1;
-            this.bunifuThinButton23.ActiveCornerRadius = 20;
-            this.bunifuThinButton23.ActiveFillColor = System.Drawing.Color.Black;
-            this.bunifuThinButton23.ActiveForecolor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton23.ActiveLineColor = System.Drawing.Color.DimGray;
-            this.bunifuThinButton23.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuThinButton23.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton23.BackgroundImage")));
-            this.bunifuThinButton23.ButtonText = "Delete Customer";
-            this.bunifuThinButton23.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton23.ForeColor = System.Drawing.Color.Black;
-            this.bunifuThinButton23.IdleBorderThickness = 1;
-            this.bunifuThinButton23.IdleCornerRadius = 20;
-            this.bunifuThinButton23.IdleFillColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton23.IdleForecolor = System.Drawing.Color.Black;
-            this.bunifuThinButton23.IdleLineColor = System.Drawing.Color.Black;
-            this.bunifuThinButton23.Location = new System.Drawing.Point(308, 161);
-            this.bunifuThinButton23.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton23.Name = "bunifuThinButton23";
-            this.bunifuThinButton23.Size = new System.Drawing.Size(181, 41);
-            this.bunifuThinButton23.TabIndex = 45;
-            this.bunifuThinButton23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuThinButton23.Click += new System.EventHandler(this.bunifuThinButton23_Click);
+            this.but2.ActiveBorderThickness = 1;
+            this.but2.ActiveCornerRadius = 20;
+            this.but2.ActiveFillColor = System.Drawing.Color.Black;
+            this.but2.ActiveForecolor = System.Drawing.Color.Transparent;
+            this.but2.ActiveLineColor = System.Drawing.Color.DimGray;
+            this.but2.BackColor = System.Drawing.SystemColors.Control;
+            this.but2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("but2.BackgroundImage")));
+            this.but2.ButtonText = "Delete Customer";
+            this.but2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.but2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.but2.ForeColor = System.Drawing.Color.Black;
+            this.but2.IdleBorderThickness = 1;
+            this.but2.IdleCornerRadius = 20;
+            this.but2.IdleFillColor = System.Drawing.Color.Transparent;
+            this.but2.IdleForecolor = System.Drawing.Color.Black;
+            this.but2.IdleLineColor = System.Drawing.Color.Black;
+            this.but2.Location = new System.Drawing.Point(308, 161);
+            this.but2.Margin = new System.Windows.Forms.Padding(5);
+            this.but2.Name = "but2";
+            this.but2.Size = new System.Drawing.Size(181, 41);
+            this.but2.TabIndex = 45;
+            this.but2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.but2.Click += new System.EventHandler(this.bunifuThinButton23_Click);
             // 
             // Customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(962, 676);
-            this.Controls.Add(this.bunifuThinButton25);
+            this.Controls.Add(this.but5);
             this.Controls.Add(this.CustomerDGV);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.bunifuThinButton21);
-            this.Controls.Add(this.bunifuThinButton22);
-            this.Controls.Add(this.bunifuThinButton24);
-            this.Controls.Add(this.bunifuThinButton23);
+            this.Controls.Add(this.but3);
+            this.Controls.Add(this.but4);
+            this.Controls.Add(this.but1);
+            this.Controls.Add(this.but2);
             this.Controls.Add(this.CustAddTb);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.CustPhoneTb);
@@ -399,10 +398,10 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton22;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton24;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton23;
+        private Bunifu.Framework.UI.BunifuThinButton2 but3;
+        private Bunifu.Framework.UI.BunifuThinButton2 but4;
+        private Bunifu.Framework.UI.BunifuThinButton2 but1;
+        private Bunifu.Framework.UI.BunifuThinButton2 but2;
         private System.Windows.Forms.TextBox CustAddTb;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox CustPhoneTb;
@@ -410,7 +409,7 @@
         private System.Windows.Forms.TextBox CustNameTb;
         private System.Windows.Forms.Label label11;
         private Guna.UI2.WinForms.Guna2DataGridView CustomerDGV;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton25;
+        private Bunifu.Framework.UI.BunifuThinButton2 but5;
         private Guna.UI2.WinForms.Guna2DataGridViewStyler guna2DataGridViewStyler1;
     }
 }
