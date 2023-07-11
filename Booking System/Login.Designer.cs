@@ -55,7 +55,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(288, 283);
             this.panel1.TabIndex = 0;
-            this.panel1.UseWaitCursor = true;
             // 
             // pictureBox2
             // 
@@ -67,21 +66,20 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.UseWaitCursor = true;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Font = new System.Drawing.Font("Bebas Neue", 24.21818F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.21818F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(388, 29);
+            this.label1.Location = new System.Drawing.Point(388, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(288, 56);
+            this.label1.Size = new System.Drawing.Size(379, 53);
             this.label1.TabIndex = 1;
             this.label1.Text = "Photography Booking";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.label1.UseCompatibleTextRendering = true;
-            this.label1.UseWaitCursor = true;
             // 
             // UsernameTb
             // 
@@ -91,7 +89,6 @@
             this.UsernameTb.Name = "UsernameTb";
             this.UsernameTb.Size = new System.Drawing.Size(286, 33);
             this.UsernameTb.TabIndex = 2;
-            this.UsernameTb.UseWaitCursor = true;
             // 
             // PassTb
             // 
@@ -102,7 +99,6 @@
             this.PassTb.PasswordChar = '*';
             this.PassTb.Size = new System.Drawing.Size(286, 33);
             this.PassTb.TabIndex = 3;
-            this.PassTb.UseWaitCursor = true;
             // 
             // label2
             // 
@@ -114,7 +110,6 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Username";
             this.label2.UseCompatibleTextRendering = true;
-            this.label2.UseWaitCursor = true;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
@@ -127,7 +122,6 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Password";
             this.label3.UseCompatibleTextRendering = true;
-            this.label3.UseWaitCursor = true;
             // 
             // AdminLogin
             // 
@@ -142,7 +136,6 @@
             this.AdminLogin.TabIndex = 8;
             this.AdminLogin.Text = "ADMIN";
             this.AdminLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.AdminLogin.UseWaitCursor = true;
             this.AdminLogin.Click += new System.EventHandler(this.AdminLogin_Click);
             this.AdminLogin.MouseLeave += new System.EventHandler(this.AdminLogin_MouseLeave);
             this.AdminLogin.MouseHover += new System.EventHandler(this.AdminLogin_MouseHover);
@@ -151,17 +144,16 @@
             // 
             this.label12.AutoSize = true;
             this.label12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label12.Font = new System.Drawing.Font("Bebas Neue", 24.21818F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.21818F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Black;
             this.label12.Location = new System.Drawing.Point(694, 7);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(30, 56);
+            this.label12.Size = new System.Drawing.Size(40, 53);
             this.label12.TabIndex = 9;
             this.label12.Text = "X";
             this.label12.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.label12.UseCompatibleTextRendering = true;
-            this.label12.UseWaitCursor = true;
             this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // pictureBox1
@@ -177,7 +169,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.UseWaitCursor = true;
             // 
             // mainLoginButton
             // 
@@ -203,7 +194,6 @@
             this.mainLoginButton.Size = new System.Drawing.Size(181, 41);
             this.mainLoginButton.TabIndex = 6;
             this.mainLoginButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.mainLoginButton.UseWaitCursor = true;
             this.mainLoginButton.Click += new System.EventHandler(this.bunifuThinButton21_Click);
             // 
             // RememberMe
@@ -216,7 +206,6 @@
             this.RememberMe.TabIndex = 10;
             this.RememberMe.Text = "Remember Me";
             this.RememberMe.UseVisualStyleBackColor = true;
-            this.RememberMe.UseWaitCursor = true;
             // 
             // Login
             // 
@@ -240,8 +229,7 @@
             this.MaximizeBox = false;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
-            this.UseWaitCursor = true;
+            this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
