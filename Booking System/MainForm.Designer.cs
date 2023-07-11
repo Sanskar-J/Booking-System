@@ -45,12 +45,14 @@
             this.label12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label12.Font = new System.Drawing.Font("Bebas Neue", 24.21818F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(917, 10);
+            this.label12.Location = new System.Drawing.Point(920, 7);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(36, 46);
+            this.label12.Size = new System.Drawing.Size(30, 56);
             this.label12.TabIndex = 11;
             this.label12.Text = "X";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label12.UseCompatibleTextRendering = true;
             this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // but1
@@ -175,8 +177,9 @@
             this.helloLbl.Font = new System.Drawing.Font("Bebas Neue", 15.70909F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.helloLbl.Location = new System.Drawing.Point(114, 165);
             this.helloLbl.Name = "helloLbl";
-            this.helloLbl.Size = new System.Drawing.Size(0, 29);
+            this.helloLbl.Size = new System.Drawing.Size(0, 30);
             this.helloLbl.TabIndex = 12;
+            this.helloLbl.UseCompatibleTextRendering = true;
             // 
             // MainForm
             // 

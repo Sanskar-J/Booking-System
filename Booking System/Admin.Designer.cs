@@ -57,12 +57,14 @@
             this.label12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label12.Font = new System.Drawing.Font("Bebas Neue", 24.21818F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(353, 10);
+            this.label12.Location = new System.Drawing.Point(363, 7);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(36, 46);
+            this.label12.Size = new System.Drawing.Size(30, 56);
             this.label12.TabIndex = 2;
             this.label12.Text = "X";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label12.UseCompatibleTextRendering = true;
             this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // label1
@@ -73,9 +75,10 @@
             this.label1.Location = new System.Drawing.Point(9, 10);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(163, 44);
+            this.label1.Size = new System.Drawing.Size(161, 53);
             this.label1.TabIndex = 1;
             this.label1.Text = "Admin Login";
+            this.label1.UseCompatibleTextRendering = true;
             // 
             // label2
             // 
@@ -83,9 +86,10 @@
             this.label2.Font = new System.Drawing.Font("Bahnschrift Condensed", 13.74545F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(50, 96);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 25);
+            this.label2.Size = new System.Drawing.Size(79, 27);
             this.label2.TabIndex = 8;
             this.label2.Text = "Username";
+            this.label2.UseCompatibleTextRendering = true;
             // 
             // AdminTb
             // 
